@@ -6,25 +6,28 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 21:13:38 by admin             #+#    #+#             */
-/*   Updated: 2023/08/14 21:41:54 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/17 18:06:19 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "../include/push_swap.h"
+
+
 
 int main (int ac, char **av)
 {
+    int size;
     t_stack *a;
     t_stack *b;
 
-    a = NULL;
+    if (ac < 2)
+        return (0);
+    if(!check_input(av))
+        print_error();
+    a = create_stack(ac, av);
     b = NULL;
-    
-    
-    if (ac == 1 || (ac == 2 && !av[1][0]))
-        return (-1);
-    else if (av == 2)
-        av = ft_split(av[1], ' ');
+    size = get_stack_size(a);
     
     
     
