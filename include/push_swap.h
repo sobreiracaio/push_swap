@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 20:45:33 by admin             #+#    #+#             */
-/*   Updated: 2023/08/17 18:11:29 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/21 18:59:06 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 typedef struct s_stack
 {
-	int				n;
+	int				nbr;
 	int				main_index;
 	int				position;
 	int				where_fit;

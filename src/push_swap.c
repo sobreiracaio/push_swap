@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 21:13:38 by admin             #+#    #+#             */
-/*   Updated: 2023/08/17 18:06:19 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/21 19:10:05 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ int main (int ac, char **av)
         print_error();
     a = create_stack(ac, av);
     b = NULL;
-    size = get_stack_size(a);
+    size = stack_len(a);
+    
     
     
     
