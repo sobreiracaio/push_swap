@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 15:17:52 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/16 20:01:30 by wcorrea-         ###   ########.fr       */
+/*   Created: 2023/08/23 22:51:08 by admin             #+#    #+#             */
+/*   Updated: 2023/08/23 23:04:48 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+#include "../include/push_swap.h"
+
+void free_string(char **str)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	else
-		return (c);
+    int i;
+
+    i = 0;
+    while(str[i])
+        i++;
+    while(i >= 0)
+        free(str[i--]);
+    free(str);
 }
+

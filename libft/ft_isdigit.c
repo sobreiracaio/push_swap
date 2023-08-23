@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 13:17:35 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/03/16 19:33:10 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/08/23 22:26:51 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../include/push_swap.h"
 
 int	ft_isdigit(int c)
 {

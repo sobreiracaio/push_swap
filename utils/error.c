@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/19 23:17:01 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/04/17 15:52:29 by wcorrea-         ###   ########.fr       */
+/*   Created: 2023/08/23 22:18:37 by admin             #+#    #+#             */
+/*   Updated: 2023/08/23 22:21:24 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/push_swap.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void error_message(char *msg, int size)
 {
-	size_t	len;
-
-	len = ft_strlen(s);
-	write(fd, s, len);
-	write(fd, "\n", 1);
+    write(2,&msg,size);
+    exit(EXIT_FAILURE);
 }

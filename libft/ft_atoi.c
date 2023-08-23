@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wcorrea- <wcorrea-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 20:25:34 by wcorrea-          #+#    #+#             */
-/*   Updated: 2023/04/13 01:16:21 by wcorrea-         ###   ########.fr       */
+/*   Updated: 2023/08/23 19:51:14 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../include/push_swap.h"
 
 int	ft_atoi(const char *nptr)
 {
