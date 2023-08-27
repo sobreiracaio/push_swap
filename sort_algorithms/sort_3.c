@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   sort_3.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 19:22:25 by admin             #+#    #+#             */
-/*   Updated: 2023/08/24 19:57:32 by admin            ###   ########.fr       */
+/*   Created: 2023/08/27 17:37:56 by admin             #+#    #+#             */
+/*   Updated: 2023/08/27 19:03:15 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "../include/push_swap.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
-
-typedef struct s_stack
+static void sort_132(t_stack **a)
 {
-    int number;
-    int index;
-    t_stack *next;
-}t_stack;
+    ra(a);
+    sa(a);
+    rra(a);
+}
 
+void sort_3(t_stack **a)
+{
+    t_stack *head;
+    int min;
+    int next_min;
 
-#endif
+    head = *a;
+    min = get_min(a, -1);
+    next_min = get_min(a, min);
+    if(is_sorted(a) == 1)
+        return;
+    if(head->index == min && head->next->index !=next_min)
+        sort_132(a);   
+}

@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/23 19:22:25 by admin             #+#    #+#             */
-/*   Updated: 2023/08/24 19:57:32 by admin            ###   ########.fr       */
+/*   Created: 2023/03/20 15:49:11 by wcorrea-          #+#    #+#             */
+/*   Updated: 2023/08/24 19:07:31 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "../include/push_swap.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <limits.h>
-
-typedef struct s_stack
+void	ft_lstadd_back(t_stack **stack, t_stack *new)
 {
-    int number;
-    int index;
-    t_stack *next;
-}t_stack;
+	t_stack	*node;
 
-
-#endif
+	if(*stack)
+	{
+		node = ft_lstlast(*stack);
+		node->next = new;
+		new->next = NULL;
+	}
+	else
+	{
+		*stack = new;
+		(*stack)->next = NULL;	
+	}
+}
