@@ -6,11 +6,26 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 23:08:12 by admin             #+#    #+#             */
-/*   Updated: 2023/08/27 17:53:23 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/28 19:06:50 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+int index_distance_head(t_stack **stack, int index)
+{
+    t_stack *head;
+    int distance;
+    
+    while(head)
+    {
+        if(head->index == index)
+            break;
+        distance++;
+        head = head->next;
+    }
+    return(distance);
+}
 
 int get_min (t_stack *stack, int number)
 {

@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 19:04:28 by admin             #+#    #+#             */
-/*   Updated: 2023/08/27 19:37:24 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/28 21:43:56 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,14 @@ int rb(t_stack **b)
         return (-1);
     write(1,"rb\n",3);
     return (0);
+}
+
+int	rr(t_stack **a, t_stack **b)
+{
+	if ((ft_lstsize(*a) < 2) || (ft_lstsize(*b) < 2))
+		return (-1);
+	rotate(a);
+	rotate(b);
+	write(1, "rr\n", 3);
+	return (0);
 }
