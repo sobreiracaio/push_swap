@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:22:25 by admin             #+#    #+#             */
-/*   Updated: 2023/08/29 19:22:32 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/29 19:55:51 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ int	ft_lstsize(t_stack *lst);
 
 void error_message(char *msg, int size);
 void free_string(char **str);
+void	free_stack(t_stack **stack);
 
 void index_stack(t_stack **stack);
 int index_distance_head(t_stack **stack, int index);
