@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 22:18:37 by admin             #+#    #+#             */
-/*   Updated: 2023/08/23 22:21:24 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/29 19:13:30 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void error_message(char *msg, int size)
 {
-    write(2,&msg,size);
+    write(2,msg,size);
+    write(2,"\n",1);
     exit(EXIT_FAILURE);
 }

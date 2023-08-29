@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:22:25 by admin             #+#    #+#             */
-/*   Updated: 2023/08/28 22:50:37 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/29 19:22:32 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,20 @@ typedef struct s_stack
     struct s_stack *next;
 }t_stack;
 
+void check_args(int ac, char **av);
+int is_sorted (t_stack **stack);
+
 char	**ft_split(char const *s, char c);
 t_stack	*ft_lstnew(int number);
 t_stack	*ft_lstlast(t_stack *head);
 void	ft_lstadd_back(t_stack **stack, t_stack *new);
 int	ft_isdigit(int c);
-int	ft_atoi(const char *nptr);
+long	ft_atoi(const char *nptr);
 int	ft_lstsize(t_stack *lst);
+
+
+void error_message(char *msg, int size);
+void free_string(char **str);
 
 void index_stack(t_stack **stack);
 int index_distance_head(t_stack **stack, int index);

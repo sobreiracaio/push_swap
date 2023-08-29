@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:39:10 by admin             #+#    #+#             */
-/*   Updated: 2023/08/23 22:49:58 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/29 19:12:01 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void check_args(int ac, char **av)
     
     i =1;
     if (ac == 2)
-        args = split_args(av[1]);
+        args = ft_split(av[1],' ');
     else
         args = av;
     while(args[i])
@@ -62,9 +62,9 @@ void check_args(int ac, char **av)
         if(!is_num(args[i]))
             error_message("Error: No valid numbers among the arguments." , 45);
         if(is_doubled(temp, args, i) == 1)
-            error_message("Error: No duplicated numbers allowed.", 26);
-        if(temp < INT_MIN || temp > INT_MAX)
-            error_message("Error: Number beyond INT limits.", 29);
+            error_message("Error: No duplicated numbers allowed.", 38);
+        if(temp < INT_MIN || temp > 2147483647)
+            error_message("Error: Number beyond INT limits.", 33);
         i++;
     }
     if(ac == 2)

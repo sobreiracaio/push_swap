@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 23:08:12 by admin             #+#    #+#             */
-/*   Updated: 2023/08/28 22:35:14 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/29 17:42:33 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@ int index_distance_head(t_stack **stack, int index)
 {
     t_stack *head;
     int distance;
+
+    distance = 0;
+    head = *stack;
     
     while(head)
     {
@@ -31,7 +34,7 @@ int get_min (t_stack **stack, int number)
 {
     t_stack *head;
     int min;
-    head = stack;
+    head = *stack;
     min = head->index;
     while(head->next)
     {
