@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 17:07:11 by admin             #+#    #+#             */
-/*   Updated: 2023/08/28 20:17:34 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/28 22:51:36 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void simple_sort(t_stack **a, t_stack **b)
     
     if(is_sorted(a) || ft_lstsize(*a) == 0 || ft_lstsize(*a) == 1)
         return;
+    size = ft_lstsize(*a);
     if(size == 2)
         sa(a);
     else if(size == 3)

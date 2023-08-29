@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 20:18:13 by admin             #+#    #+#             */
-/*   Updated: 2023/08/28 21:34:10 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/28 22:52:11 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void radix_sort (t_stack **a, t_stack **b)
 
     i = 0;
     head_a = *a;
-    size = ft_lstsize(a);
+    size = ft_lstsize(*a);
     max_bits = get_max_bits(a);
     while(i < max_bits)
     {

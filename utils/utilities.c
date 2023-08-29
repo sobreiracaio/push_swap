@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 23:08:12 by admin             #+#    #+#             */
-/*   Updated: 2023/08/28 19:06:50 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/28 22:35:14 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int index_distance_head(t_stack **stack, int index)
     return(distance);
 }
 
-int get_min (t_stack *stack, int number)
+int get_min (t_stack **stack, int number)
 {
     t_stack *head;
     int min;

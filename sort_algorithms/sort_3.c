@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 17:37:56 by admin             #+#    #+#             */
-/*   Updated: 2023/08/28 18:59:24 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/28 22:46:57 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void sort_3(t_stack **a)
     next_min = get_min(a, min);
     if(is_sorted(a) == 1)
         return;
-    if(head->index == min && head->next->index !=next_min)
+    if(head->index == min && head->next->index != next_min)
         sort_132(a);   
     else if(head->index == next_min)
         sort_231(a, head, min);
