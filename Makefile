@@ -6,7 +6,7 @@
 #    By: admin <admin@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/29 17:32:47 by admin             #+#    #+#              #
-#    Updated: 2023/08/29 17:34:28 by admin            ###   ########.fr        #
+#    Updated: 2023/08/29 21:47:44 by admin            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror -g
 INCLUDE = -I include
+VAL = valgrind --leak-check=full --track-origin=yes
 
 .c.o:
 		${CC} ${CFLAGS} ${INCLUDE} -c $< -o ${<:.c=.o}
