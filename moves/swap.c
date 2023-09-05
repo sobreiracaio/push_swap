@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 17:11:15 by admin             #+#    #+#             */
-/*   Updated: 2023/08/28 21:43:42 by admin            ###   ########.fr       */
+/*   Updated: 2023/08/31 19:56:59 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int swap(t_stack **stack)
     head = *stack;
     next = head->next;
     if(!head && !next)
-        error_message("Error: Invalid data.",21);
+        error_message("Error: data not found.",21);
     temp_nbr = head->number;
     temp_index = head->index;
     head->number = next->number;

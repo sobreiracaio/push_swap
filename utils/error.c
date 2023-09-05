@@ -6,15 +6,14 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 22:18:37 by admin             #+#    #+#             */
-/*   Updated: 2023/08/29 19:13:30 by admin            ###   ########.fr       */
+/*   Updated: 2023/09/01 19:53:41 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void error_message(char *msg, int size)
+void error_message()
 {
-    write(2,msg,size);
-    write(2,"\n",1);
+    write(2,"Error\n",6);
     exit(EXIT_FAILURE);
 }

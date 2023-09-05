@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:39:10 by admin             #+#    #+#             */
-/*   Updated: 2023/08/29 19:12:01 by admin            ###   ########.fr       */
+/*   Updated: 2023/09/04 21:22:59 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,26 @@ static int is_doubled(int nbr, char **av, int i)
 
 static int is_num(char *nbr)
 {
-    int i;
+    int	i;
 
-    i = 0;
-    if(nbr[0] == '-' || nbr[0] == '+')
-        i++;
-    if((nbr[0] == '-' || nbr[0] == '+') && !nbr[1])
-        return (0);
-    while(nbr[i])
-    {
-        if(!ft_isdigit(nbr[i]))
-            return (0);
-        i++;
-    }
-    return (1);
-    
+	i = 0;
+	if (nbr[0] == '-' || nbr[0] == '+')
+	{
+		i++;
+	}
+	if ((nbr[0] == '-' || nbr[0] == '+') && !nbr[1])
+	{
+		return (0);
+	}
+	while (nbr[i])
+	{
+		if (!ft_isdigit(nbr[i]))
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (1);
 }
 
 void check_args(int ac, char **av)
@@ -53,18 +58,22 @@ void check_args(int ac, char **av)
     
     i =1;
     if (ac == 2)
+    {
         args = ft_split(av[1],' ');
+        
+    }
     else
-        args = av;
+            args = av;
     while(args[i])
     {
+       
         temp = ft_atoi(args[i]);
         if(!is_num(args[i]))
-            error_message("Error: No valid numbers among the arguments." , 45);
+            error_message();
         if(is_doubled(temp, args, i) == 1)
-            error_message("Error: No duplicated numbers allowed.", 38);
+            error_message();
         if(temp < INT_MIN || temp > 2147483647)
-            error_message("Error: Number beyond INT limits.", 33);
+            error_message();
         i++;
     }
     if(ac == 2)
