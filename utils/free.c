@@ -12,16 +12,16 @@
 
 #include "../include/push_swap.h"
 
-void free_string(char **str)
+void	free_string(char **str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(str[i])
-        i++;
-    while(i >= 0)
-        free(str[i--]);
-    free(str);
+	i = 0;
+	while (str[i])
+		i++;
+	while (i >= 0)
+		free(str[i--]);
+	free(str);
 }
 
 void	free_stack(t_stack **stack)
@@ -38,4 +38,3 @@ void	free_stack(t_stack **stack)
 	}
 	free(stack);
 }
-

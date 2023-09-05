@@ -15,23 +15,18 @@
 long	ft_atoi(const char *nptr)
 {
 	long	sum;
-	int 	sign;
-	
-
-	
+	int		sign;
 
 	sum = 0;
 	sign = 1;
 	while (*nptr == ' ' || (*nptr >= 1 && *nptr <= 31) || *nptr == 127)
 		nptr++;
-
 	if (*nptr == '+' || *nptr == '-')
 	{
 		if (*nptr == '-')
 			sign = -1;
 		nptr++;
 	}
-	
 	while (*nptr >= '0' && *nptr <= '9')
 	{
 		sum = (sum * 10) + (*nptr - '0');

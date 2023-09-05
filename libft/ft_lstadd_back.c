@@ -16,7 +16,7 @@ void	ft_lstadd_back(t_stack **stack, t_stack *new)
 {
 	t_stack	*node;
 
-	if(*stack)
+	if (*stack)
 	{
 		node = ft_lstlast(*stack);
 		node->next = new;
@@ -25,6 +25,6 @@ void	ft_lstadd_back(t_stack **stack, t_stack *new)
 	else
 	{
 		*stack = new;
-		(*stack)->next = NULL;	
+		(*stack)->next = NULL;
 	}
 }

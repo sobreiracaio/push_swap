@@ -12,61 +12,56 @@
 
 #include "../include/push_swap.h"
 
-static void sort_stack(t_stack **sa, t_stack **sb)
+static void	sort_stack(t_stack **sa, t_stack **sb)
 {
-    if(ft_lstsize(*sa) <= 5)
-        simple_sort(sa, sb);
-    else
-        radix_sort(sa, sb);
+	if (ft_lstsize(*sa) <= 5)
+		simple_sort(sa, sb);
+	else
+		radix_sort(sa, sb);
 }
 
-static void create_stack(t_stack **stack, int ac, char **av)
+static void	create_stack(t_stack **stack, int ac, char **av)
 {
-    t_stack *new;
-    char **args;
-    int i;
+	t_stack	*new;
+	char	**args;
+	int		i;
 
-    i = 0;
-    if(ac == 2)
-        
-        args = ft_split(av[1], ' ');
-    else
-    {
-        i = 1;
-        args = av;
-    }
-    while(args[i])
-    {
-
-        new = ft_lstnew(ft_atoi(args[i]));
-        ft_lstadd_back(stack, new);
-        i++;
-    }
-    index_stack(stack);
-    if(ac == 2)
-        free_string(args);
-    
+	i = 0;
+	if (ac == 2)
+		args = ft_split(av[1], ' ');
+	else
+	{
+		i = 1;
+		args = av;
+	}
+	while (args[i])
+	{
+		new = ft_lstnew(ft_atoi(args[i]));
+		ft_lstadd_back(stack, new);
+		i++;
+	}
+	index_stack(stack);
+	if (ac == 2)
+		free_string(args);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-    t_stack **sa;
-    t_stack **sb;
+	t_stack	**sa;
+	t_stack	**sb;
 
-    if (ac < 2)
-        return (0);
-    check_args(ac, av);
-    sa = (t_stack **)malloc(sizeof(t_stack));
-    *sa = NULL;
-    create_stack(sa, ac, av);
-    if(is_sorted(sa) == 1)
-        exit(EXIT_SUCCESS);
-    sb = (t_stack **)malloc(sizeof(t_stack));
-    *sb = NULL;
-    
-    sort_stack(sa, sb);
-    
-    free_stack(sa);
-    free_stack(sb);
-    return (0);
+	if (ac < 2)
+		return (0);
+	check_args(ac, av);
+	sa = (t_stack **)malloc(sizeof(t_stack));
+	*sa = NULL;
+	create_stack(sa, ac, av);
+	if (is_sorted(sa) == 1)
+		exit(EXIT_SUCCESS);
+	sb = (t_stack **)malloc(sizeof(t_stack));
+	*sb = NULL;
+	sort_stack(sa, sb);
+	free_stack(sa);
+	free_stack(sb);
+	return (0);
 }

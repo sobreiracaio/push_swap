@@ -12,8 +12,8 @@
 
 #include "../include/push_swap.h"
 
-void error_message()
+void	error_message(void)
 {
-    write(2,"Error\n",6);
-    exit(EXIT_FAILURE);
+	write(2, "Error\n", 6);
+	exit(EXIT_FAILURE);
 }

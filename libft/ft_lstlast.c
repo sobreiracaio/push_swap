@@ -14,13 +14,13 @@
 
 t_stack	*ft_lstlast(t_stack *head)
 {
-	t_stack *temp;
-	
+	t_stack	*temp;
+
 	temp = head;
-	while(temp->next)
+	while (temp->next)
 	{
 		temp = temp->next;
-		if(temp->next == NULL)
+		if (temp->next == NULL)
 			return (temp);
 	}
 	return (temp);

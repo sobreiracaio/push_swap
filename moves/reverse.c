@@ -12,44 +12,43 @@
 
 #include "../include/push_swap.h"
 
-static int reverse(t_stack **stack)
+static int	reverse(t_stack **stack)
 {
-    t_stack *head;
-    t_stack *tail;
+	t_stack	*head;
+	t_stack	*tail;
 
-    if(ft_lstsize(*stack) < 2)
-        return (-1);
-    head = *stack;
-    tail = ft_lstlast(head);
-    
-    while(head)
-    {
-        if(head->next->next == NULL)
-        {
-            head->next = NULL;
-            break;
-        }
-        head = head->next;
-    }
-    tail->next = *stack;
-    *stack = tail;
-    return (0);
+	if (ft_lstsize(*stack) < 2)
+		return (-1);
+	head = *stack;
+	tail = ft_lstlast(head);
+	while (head)
+	{
+		if (head->next->next == NULL)
+		{
+			head->next = NULL;
+			break ;
+		}
+	head = head->next;
+	}
+	tail->next = *stack;
+	*stack = tail;
+	return (0);
 }
 
-int rra(t_stack **a)
+int	rra(t_stack **a)
 {
-    if(reverse(a) == -1)
-        return (-1);
-    write(1,"rra\n",4);
-    return (0);
+	if (reverse(a) == -1)
+		return (-1);
+	write(1, "rra\n", 4);
+	return (0);
 }
 
-int rrb(t_stack **b)
+int	rrb(t_stack **b)
 {
-    if(reverse(b) == -1)
-        return (-1);
-    write(1,"rrb\n",4);
-    return (0);
+	if (reverse(b) == -1)
+		return (-1);
+	write(1, "rrb\n", 4);
+	return (0);
 }
 
 int	rrr(t_stack **a, t_stack **b)
