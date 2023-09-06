@@ -6,11 +6,26 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:22:12 by admin             #+#    #+#             */
-/*   Updated: 2023/09/04 19:22:42 by admin            ###   ########.fr       */
+/*   Updated: 2023/09/06 22:16:07 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+int	check_size(char **args)
+{
+	int		size;
+
+	size = 0;
+	while (args[size] != NULL)
+		size++;
+	if (size <= 1)
+	{
+		free_string(args);
+		error_message();
+	}
+	return (0);
+}
 
 static void	sort_stack(t_stack **sa, t_stack **sb)
 {
@@ -34,6 +49,7 @@ static void	create_stack(t_stack **stack, int ac, char **av)
 		i = 1;
 		args = av;
 	}
+	check_size(args);
 	while (args[i])
 	{
 		new = ft_lstnew(ft_atoi(args[i]));
@@ -57,7 +73,10 @@ int	main(int ac, char **av)
 	*sa = NULL;
 	create_stack(sa, ac, av);
 	if (is_sorted(sa) == 1)
+	{
+		free_stack(sa);
 		exit(EXIT_SUCCESS);
+	}
 	sb = (t_stack **)malloc(sizeof(t_stack));
 	*sb = NULL;
 	sort_stack(sa, sb);
