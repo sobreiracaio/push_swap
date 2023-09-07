@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:39:10 by admin             #+#    #+#             */
-/*   Updated: 2023/09/06 21:30:28 by admin            ###   ########.fr       */
+/*   Updated: 2023/09/07 18:02:54 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	check_args(int ac, char **av)
 	}
 	else
 		args = av;
+	check_size(args);
 	while (args[i])
 	{
 		temp = ft_atoi(args[i]);

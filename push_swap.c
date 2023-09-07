@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:22:12 by admin             #+#    #+#             */
-/*   Updated: 2023/09/06 22:16:07 by admin            ###   ########.fr       */
+/*   Updated: 2023/09/07 17:30:24 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,10 @@ static void	create_stack(t_stack **stack, int ac, char **av)
 	}
 	index_stack(stack);
 	if (ac == 2)
+	{
+		free(new);
 		free_string(args);
+	}
 }
 
 int	main(int ac, char **av)
