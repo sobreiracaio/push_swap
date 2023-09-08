@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:22:12 by admin             #+#    #+#             */
-/*   Updated: 2023/09/07 17:30:24 by admin            ###   ########.fr       */
+/*   Updated: 2023/09/08 17:39:21 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,13 @@ int	check_size(char **args)
 
 static void	sort_stack(t_stack **sa, t_stack **sb)
 {
+	if(is_sorted(sa) == 0)
+	{
 	if (ft_lstsize(*sa) <= 5)
 		simple_sort(sa, sb);
 	else
 		radix_sort(sa, sb);
+	}
 }
 
 static void	create_stack(t_stack **stack, int ac, char **av)
@@ -49,7 +52,6 @@ static void	create_stack(t_stack **stack, int ac, char **av)
 		i = 1;
 		args = av;
 	}
-	check_size(args);
 	while (args[i])
 	{
 		new = ft_lstnew(ft_atoi(args[i]));
@@ -58,10 +60,7 @@ static void	create_stack(t_stack **stack, int ac, char **av)
 	}
 	index_stack(stack);
 	if (ac == 2)
-	{
-		free(new);
 		free_string(args);
-	}
 }
 
 int	main(int ac, char **av)
@@ -75,11 +74,6 @@ int	main(int ac, char **av)
 	sa = (t_stack **)malloc(sizeof(t_stack));
 	*sa = NULL;
 	create_stack(sa, ac, av);
-	if (is_sorted(sa) == 1)
-	{
-		free_stack(sa);
-		exit(EXIT_SUCCESS);
-	}
 	sb = (t_stack **)malloc(sizeof(t_stack));
 	*sb = NULL;
 	sort_stack(sa, sb);

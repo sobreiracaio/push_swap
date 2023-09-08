@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:39:10 by admin             #+#    #+#             */
-/*   Updated: 2023/09/07 18:02:54 by admin            ###   ########.fr       */
+/*   Updated: 2023/09/08 16:45:26 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,7 @@ void	check_args(int ac, char **av)
 
 	i = 1;
 	if (ac == 2)
-	{
 		args = ft_split(av[1], ' ');
-	}
 	else
 		args = av;
 	check_size(args);
