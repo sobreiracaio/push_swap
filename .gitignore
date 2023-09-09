@@ -1,6 +1,0 @@
-checker_linux
-push_swap_test_linux.sh
-push_swap.c
-traces.txt
-libft/ft_split.c
-utils/.check_args.c.swp
