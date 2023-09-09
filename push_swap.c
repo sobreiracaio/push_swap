@@ -29,12 +29,12 @@ int	check_size(char **args)
 
 static void	sort_stack(t_stack **sa, t_stack **sb)
 {
-	if(is_sorted(sa) == 0)
+	if (is_sorted(sa) == 0)
 	{
-	if (ft_lstsize(*sa) <= 5)
-		simple_sort(sa, sb);
-	else
-		radix_sort(sa, sb);
+		if (ft_lstsize(*sa) <= 5)
+			simple_sort(sa, sb);
+		else
+			radix_sort(sa, sb);
 	}
 }
 

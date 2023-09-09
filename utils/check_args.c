@@ -6,11 +6,26 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:39:10 by admin             #+#    #+#             */
-/*   Updated: 2023/09/08 16:45:26 by admin            ###   ########.fr       */
+/*   Updated: 2023/09/09 17:15:20 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+void	has_alpha(char *args)
+{
+	int	i;
+
+	i = 0;
+	while (args[i])
+	{
+		if ((args[i] >= '0' && args[i] <= '9') || args [i] == ' '
+			|| args[i] == '+' || args[i] == '-')
+			i++;
+		else
+			error_message();
+	}
+}
 
 static int	is_doubled(int nbr, char **av, int i)
 {
@@ -56,16 +71,17 @@ void	check_args(int ac, char **av)
 
 	i = 1;
 	if (ac == 2)
+	{
+		has_alpha(av[1]);
 		args = ft_split(av[1], ' ');
+	}
 	else
 		args = av;
 	check_size(args);
 	while (args[i])
 	{
 		temp = ft_atoi(args[i]);
-		if (!is_num(args[i]))
-			error_message();
-		if (is_doubled(temp, args, i) == 1)
+		if (!is_num(args[i]) || is_doubled(temp, args, i) == 1)
 			error_message();
 		if (temp < INT_MIN || temp > 2147483647)
 			error_message();
