@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:22:25 by admin             #+#    #+#             */
-/*   Updated: 2023/09/07 17:48:11 by admin            ###   ########.fr       */
+/*   Updated: 2023/09/11 23:38:02 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,8 @@ typedef struct s_stack
 	struct s_stack	*next;
 }t_stack;
 
-void	check_args(int ac, char **av);
+int		check_args(char **av);
 int		is_sorted(t_stack **stack);
-int		check_size(char **args);
 
 char	**ft_split(char const *s, char c);
 t_stack	*ft_lstnew(int number);
