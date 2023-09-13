@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/23 19:22:12 by admin             #+#    #+#             */
-/*   Updated: 2023/09/11 23:37:45 by admin            ###   ########.fr       */
+/*   Updated: 2023/09/13 17:36:22 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,14 @@ int	main(int ac, char **av)
 		return (0);
 	if (check_args(av) == 1)
 	{
-	sa = (t_stack **)malloc(sizeof(t_stack));
-	*sa = NULL;
-	create_stack(sa, ac, av);
-	sb = (t_stack **)malloc(sizeof(t_stack));
-	*sb = NULL;
-	sort_stack(sa, sb);
-	free_stack(sa);
-	free_stack(sb);
+		sa = (t_stack **)malloc(sizeof(t_stack));
+		*sa = NULL;
+		create_stack(sa, ac, av);
+		sb = (t_stack **)malloc(sizeof(t_stack));
+		*sb = NULL;
+		sort_stack(sa, sb);
+		free_stack(sa);
+		free_stack(sb);
 	}
 	return (0);
 }

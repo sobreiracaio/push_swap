@@ -6,7 +6,7 @@
 /*   By: admin <admin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 23:04:04 by admin             #+#    #+#             */
-/*   Updated: 2023/09/11 23:21:39 by admin            ###   ########.fr       */
+/*   Updated: 2023/09/13 17:37:40 by admin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,8 +95,8 @@ static char	*remove_extra_zeros(char *s)
 
 int	check_args(char **arg)
 {
-	int	i;
-	long temp;
+	int		i;
+	long	temp;
 
 	i = 1;
 	while (arg[i])
